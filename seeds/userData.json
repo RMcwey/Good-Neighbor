@@ -2,16 +2,22 @@
   {
     "name": "Sal",
     "email": "sal@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "unit_id": 1035,
+    "mobile": 7701234567
   },
   {
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "unit_id": 2060,
+    "mobile": 7702345678
   },
   {
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "unit_id": 3070,
+    "mobile": 7703456789
   }
 ]
