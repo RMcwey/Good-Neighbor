@@ -35,6 +35,20 @@ User.init(
         len: [8],
       },
     },
+    unit_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [4],
+      }
+    },
+    mobile: {
+      type: DataTypes.BIGINT,
+      allowNull: false,
+      validate: {
+        len: [10],
+      }
+    },
   },
   {
     hooks: {
