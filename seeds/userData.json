@@ -3,21 +3,21 @@
     "name": "Sal",
     "email": "sal@hotmail.com",
     "password": "password12345",
-    "unit_id": 1035,
-    "mobile": 7701234567
+    "unitNumber": 1035,
+    "mobileNumber": 7701234567
   },
   {
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
     "password": "password12345",
-    "unit_id": 2060,
-    "mobile": 7702345678
+    "unitNumber": 2060,
+    "mobileNumber": 7702345678
   },
   {
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345",
-    "unit_id": 3070,
-    "mobile": 7703456789
+    "unitNumber": 3070,
+    "mobileNumber": 7703456789
   }
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "movie_rating_name": "G",
+    "movie_rating_id": 1
+  },
+  {
+    "movie_rating_name": "PG",
+    "movie_rating_id": 2
+  },
+  {
+    "movie_rating_name": "PG-13",
+    "movie_rating_id": 3
+  },
+  {
+    "movie_rating_name": "R",
+    "movie_rating_id": 4
+  },
+  {
+    "movie_rating_name": "NC-17",
+    "movie_rating_id": 5
+  },
+  {
+    "movie_rating_name": "X",
+    "movie_rating_id": 6
+  }
+]
