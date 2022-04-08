@@ -40,6 +40,7 @@ const delButtonHandler = async (event) => {
   }
 };
 
+
 document
   .querySelector('.new-movie-form')
   .addEventListener('submit', newFormHandler);
