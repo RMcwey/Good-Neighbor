@@ -1,0 +1,42 @@
+[
+  {
+    "movie_name": "The Shawshank Redemption",
+    "publish_year": 1994,
+    "movie_genre": 1,
+    "mpaa_rating": 4,
+    "movie_description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. --(from IMDB)",
+    "movie_contributor": 1
+  },
+  {
+    "movie_name": "The Godfather",
+    "publish_year": 1992,
+    "movie_genre": 1,
+    "mpaa_rating": 4,
+    "movie_description": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son. --(from IMDB)",
+    "movie_contributor": 2
+  },
+  {
+    "movie_name": "The Dark Knight",
+    "publish_year": 2008,
+    "movie_genre": 3,
+    "mpaa_rating": 3,
+    "movie_description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice. --(from IMDB)",
+    "movie_contributor": 3
+  },
+  {
+    "movie_name": "The Matrix",
+    "publish_year": 1999,
+    "movie_genre": 3,
+    "mpaa_rating": 3,
+    "movie_description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence. --(from IMDB)",
+    "movie_contributor": 3
+  },
+  {
+    "movie_name": "Toy Story",
+    "publish_year": 1995,
+    "movie_genre": 2,
+    "mpaa_rating": 2,
+    "movie_description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room. --(from IMDB)",
+    "movie_contributor": 3
+  }
+]

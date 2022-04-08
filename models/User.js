@@ -35,14 +35,14 @@ User.init(
         len: [8],
       },
     },
-    unit_id: {
+    unit_number: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [4],
       }
     },
-    mobile: {
+    mobile_number: {
       type: DataTypes.BIGINT,
       allowNull: false,
       validate: {
@@ -64,7 +64,7 @@ User.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'user',
   }
 );
