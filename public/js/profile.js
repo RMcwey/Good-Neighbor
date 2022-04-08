@@ -1,16 +1,16 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#movie-name').value.trim();
+  const movie_name = document.querySelector('#movie-name').value.trim();
   const publish_year = document.querySelector('#movie-year').value.trim();
   const movie_genre = document.querySelector('#movie-genre').value.trim();
-  const movie_rating = document.querySelector('#movie-mpaa').value.trim();
-  const description = document.querySelector('#movie-desc').value.trim();
+  const mpaa_rating = document.querySelector('#movie-mpaa').value.trim();
+  const movie_description = document.querySelector('#movie-desc').value.trim();
 
-  if (name && publish_year && description) {
-    const response = await fetch(`/api/projects`, {
+  if (movie_name && publish_year && movie_genre && mpaa_rating && movie_description) {
+    const response = await fetch(`/api/movies`, {
       method: 'POST',
-      body: JSON.stringify({ name, publish_year, movie_genre, movie_rating, description }),
+      body: JSON.stringify({ movie_name, publish_year, movie_genre, mpaa_rating, movie_description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -26,7 +26,7 @@ const newFormHandler = async (event) => {
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+    const movie_id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/movies/${movie_id}`, {
       method: 'DELETE',

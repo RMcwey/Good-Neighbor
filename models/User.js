@@ -10,6 +10,12 @@ class User extends Model {
 
 User.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,17 +35,16 @@ User.init(
         len: [8],
       },
     },
-    unitNumber: {
+    unit_number: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [4],
       }
     },
-    mobileNumber: {
+    mobile_number: {
       type: DataTypes.BIGINT,
       allowNull: false,
-      primaryKey: true,
       validate: {
         len: [10],
       }
@@ -59,7 +64,7 @@ User.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'user',
   }
 );

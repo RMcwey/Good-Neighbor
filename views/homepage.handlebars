@@ -5,12 +5,12 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/project/{{movies.movie_id}}">{{movies.movie_name}}</a>
+      <a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a>
     </h2>
     <p>
-      Movie Released in Year: {{movies.publish_year}}
+      Movie Released in Year: {{movie.publish_year}}
     </p>
-    <p>This is on {{movie.user.name}}'s shelf.</p>
+    <p>This is on {{user.name}}'s shelf.</p>
   </div>
   <div class="col-md-7">
     <p>

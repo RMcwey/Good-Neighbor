@@ -25,7 +25,7 @@ Movie.init(
       validate: {
         len: [1],
       },
-      defaultValue: "9",
+      defaultValue: 9,
     },
     mpaa_rating: {
       type: DataTypes.INTEGER,
@@ -35,7 +35,7 @@ Movie.init(
       }
     },
     movie_description: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING,
       allowNull: true,
       defaultValue: "(No description given by the user.)",
     },
@@ -48,7 +48,7 @@ Movie.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'mobileNumber',
+        key: 'id',
       },
     },
   },
@@ -56,7 +56,7 @@ Movie.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'movie',
   }
 );

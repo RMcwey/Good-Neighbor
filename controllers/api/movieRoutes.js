@@ -6,7 +6,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newMovie = await Movie.create({
       ...req.body,
-      user_id: req.session.user_id,
+      movie_contributor: req.session.user_id,
     });
 
     res.status(200).json(newMovie);
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const MovieData = await Movie.destroy({
+    const movieData = await Movie.destroy({
       where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
+        movie_id: req.params.id,
+        movie_contributor: req.session.user_id,
       },
     });
 
-    if (!MovieData) {
-      res.status(404).json({ message: 'No MOVIE found with this id!' });
+    if (!movieData) {
+      res.status(404).json({ message: 'No project found with this id!' });
       return;
     }
 
-    res.status(200).json(MovieData);
+    res.status(200).json(movieData);
   } catch (err) {
     res.status(500).json(err);
   }

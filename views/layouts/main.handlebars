@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Good Neighbor</title>
+  <title>The Shelf ... brought to you by the Good Neighbors</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -14,13 +14,13 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <span role="img" aria-label="money">💸</span>
-        <a href="/">Good Neighbor ... Check the Shelf!</a>
+        <a href="/">The Shelf</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile">    || my shelf ||    </a>
+        <button class="no-button" id="logout">    || logout ||    </button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}

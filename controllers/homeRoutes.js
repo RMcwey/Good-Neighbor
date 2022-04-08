@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const Movies = MovieData.map((movie) => movie.get({ plain: true }));
+    const movies = MovieData.map((movies) => movies.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -33,7 +33,7 @@ router.get('/movie/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['name', 'email', 'unit_number', 'mobile_number'],
         },
       ],
     });
