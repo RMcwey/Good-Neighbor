@@ -1,26 +1,32 @@
 [
   {
-    "movie_rating_name": "G",
-    "movie_rating_id": 1
+    "rating_full_name": "General Audiences",
+    "rating_abbrev": "G",
+    "rating_id": 1
   },
   {
-    "movie_rating_name": "PG",
-    "movie_rating_id": 2
+    "rating_full_name": "Parental Guidance",
+    "rating_abbrev": "PG",
+    "rating_id": 2
   },
   {
-    "movie_rating_name": "PG-13",
-    "movie_rating_id": 3
+    "rating_full_name": "Parental Guidance, age 13+",
+    "rating_abbrev": "PG-13",
+    "rating_id": 3
   },
   {
-    "movie_rating_name": "R",
-    "movie_rating_id": 4
+    "rating_full_name": "Restricted Audiences",
+    "rating_abbrev": "R",
+    "rating_id": 4
   },
   {
-    "movie_rating_name": "NC-17",
-    "movie_rating_id": 5
+    "rating_full_name": "No Children, age 17+",
+    "rating_abbrev": "NC-17",
+    "rating_id": 5
   },
   {
-    "movie_rating_name": "X",
-    "movie_rating_id": 6
+    "rating_full_name": "Sexual Themes, Pornographic",
+    "rating_abbrev": "X",
+    "rating_id": 6
   }
 ]

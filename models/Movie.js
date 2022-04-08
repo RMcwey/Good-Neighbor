@@ -26,12 +26,20 @@ Movie.init(
         len: [1],
       },
       defaultValue: 9,
+      references: {
+        model: 'genres',
+        key: 'genre_id'
+      }
     },
     mpaa_rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [1],
+      },
+      references: {
+        model: 'ratings',
+        key: 'rating_id'
       }
     },
     movie_description: {
@@ -47,7 +55,7 @@ Movie.init(
     movie_contributor: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id',
       },
     },
@@ -57,7 +65,7 @@ Movie.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: 'movie',
+    modelName: 'movies',
   }
 );
 
