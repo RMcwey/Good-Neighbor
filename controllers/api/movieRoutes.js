@@ -42,16 +42,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-
-// possibly needs to be removed
-// router.get('/:movie_id', async (req, res) => {
-//   try {
-//     const oneTag = await Movie.findByPk(req.params.movie_id);
-    // if (!oneTag){
-    //   res.status(404).json({ message: 'No tag found with this id' });
-    //   return;
-    // }
-
 router.get('/:id', async (req, res) => {
   try {
     const movie = await Movie.findByPk(req.params.id);
@@ -66,7 +56,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 router.put('/:id', async (req, res) => {
   try {
