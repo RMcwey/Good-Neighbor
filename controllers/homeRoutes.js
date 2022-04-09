@@ -60,14 +60,15 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    const borrowed = await Movie.findAll({
+    const borrowedmovies = await Movie.findAll({
       where: {
-        
+        borrower: req.session.user_id
       }
     })
 
     res.render('profile', {
       ...user,
+      ...borrowedmovies,
       logged_in: true
     });
   } catch (err) {
