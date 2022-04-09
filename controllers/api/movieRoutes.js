@@ -3,6 +3,7 @@ const { Movie } = require('../../models');
 const { update } = require('../../models/User');
 const withAuth = require('../../utils/auth');
 
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newMovie = await Movie.create({
@@ -16,35 +17,40 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// possibly needs to be removed
-router.get('/:movie_id', async (req, res) => {
-  try {
-    const oneTag = await Movie.findByPk(req.params.movie_id);
-    // if (!oneTag){
-    //   res.status(404).json({ message: 'No tag found with this id' });
-    //   return;
-    // }
 
-    res.status(200).json(oneTag);
+router.get('/:id', async (req, res) => {
+  try {
+    const movie = await Movie.findByPk(req.params.id);
+    
+    if (!movie){
+      res.status(404).json({ message: 'No tag found with this id' });
+      return;
+    }
+
+    res.status(200).json(movie);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.put('/:movie_id', async (req, res) => {
+
+router.put('/:id', async (req, res) => {
   try {
-    const updateTag = await Movie.update(req.body, {
+    const changeAvailability = await Movie.update(req.body, {
       where: {
-        movie_id: req.params.movie_id,
+        movie_id: req.params.id,
       },
     }
   )
+    if (!changeAvailability) {
+      res.status(404).json({ message: 'No movie found with this id.' });
+      return;
+    }
     res.status(200).json({ message: "successfully edited" });
   } catch (err) {
     res.status(400).json(err);
   }
 });
-
 
 
 router.delete('/:id', withAuth, async (req, res) => {
@@ -57,7 +63,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!movieData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+      res.status(404).json({ message: 'No movie found with this id!' });
       return;
     }
 
@@ -66,5 +72,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
