@@ -1,5 +1,6 @@
 <!-- Loop over each object in the projects array -->
 {{#each movies as |movie| }}
+{{#if movie.is_available}}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
@@ -10,7 +11,11 @@
     <p>
       Movie Released in Year: {{movie.publish_year}}
     </p>
+
+    {{#if ../logged_in}}
     <p>This is on {{user.name}}'s shelf.</p>
+    {{/if}}
+
   </div>
   <div class="col-md-7">
     <p>
@@ -18,4 +23,5 @@
     </p>
   </div>
 </div>
+{{/if}}
 {{/each}}

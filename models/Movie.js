@@ -59,6 +59,15 @@ Movie.init(
         key: 'id',
       },
     },
+    current_holder: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: null,
+      references: {
+        model: 'users',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
