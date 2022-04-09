@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Movie } = require('../../models');
+const { update } = require('../../models/User');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -15,17 +16,30 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-
-router.put('/:id', async (req, res) => {
+// possibly needs to be removed
+router.get('/:movie_id', async (req, res) => {
   try {
-    const editIsAvailable = await Movie.update(
-      {is_available: req.body.is_available},
-      {where: req.params.id}
-    )
+    const oneTag = await Movie.findByPk(req.params.movie_id);
+    // if (!oneTag){
+    //   res.status(404).json({ message: 'No tag found with this id' });
+    //   return;
+    // }
 
-    res.status(200).json(editIsAvailable);
-    res.json(editIsAvailable);
-    console.log("successfully edited");
+    res.status(200).json(oneTag);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.put('/:movie_id', async (req, res) => {
+  try {
+    const updateTag = await Movie.update(req.body, {
+      where: {
+        movie_id: req.params.movie_id,
+      },
+    }
+  )
+    res.status(200).json({ message: "successfully edited" });
   } catch (err) {
     res.status(400).json(err);
   }
