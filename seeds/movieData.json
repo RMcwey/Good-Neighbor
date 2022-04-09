@@ -5,7 +5,8 @@
     "movie_genre": 1,
     "mpaa_rating": 4,
     "movie_description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. --(from IMDB)",
-    "movie_contributor": 1
+    "movie_contributor": 1,
+    "current_holder": 3
   },
   {
     "movie_name": "The Godfather",
@@ -37,6 +38,7 @@
     "movie_genre": 2,
     "mpaa_rating": 2,
     "movie_description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room. --(from IMDB)",
-    "movie_contributor": 3
+    "movie_contributor": 3,
+    "current_holder": 1
   }
 ]
