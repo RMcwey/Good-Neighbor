@@ -8,7 +8,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newMovie = await Movie.create({
       ...req.body,
-      contributor: req.session.user_id,
+      movie_contributor: req.session.user_id,
     });
 
     res.status(200).json(newMovie);
@@ -81,7 +81,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const movieData = await Movie.destroy({
       where: {
         movie_id: req.params.id,
-        contributor: req.session.user_id,
+        movie_contributor: req.session.user_id,
       },
     });
 
