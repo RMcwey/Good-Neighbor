@@ -67,7 +67,7 @@ Movie.init(
         model: 'users',
         key: 'id',
       },
-    }
+    },
   },
   {
     sequelize,
