@@ -6,7 +6,7 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Add a new movie to The Shelf:</h3>
+    <h3>Add a new movie to your shelf:</h3>
 
     <form class="form new-movie-form">
       <div class="form-group">
@@ -37,7 +37,7 @@
 
   {{#if movies.length}}
   <div class="col-md-6 movie-list">
-    <h3>Your movies on The Shelf:</h3>
+    <h3>Movies currenly on your shelf:</h3>
 
     {{#each movies as |movie|}}
     <div class="row mb-2">
@@ -51,24 +51,6 @@
     {{/each}}
   </div>
   {{/if}}
-
-  {{#if borrowedmovies.length}}
-  {{!-- <div class="col-md-6 movie-list"> --}}
-    <h3>Movies your BORROWING from The Shelf:</h3>
-
-    {{#each borrowedmovies as |borrowedmovie|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/movie/{{borrowedmovie.movie_id}}">{{borrowedmovie.movie_name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">RETURN</button>
-      </div>
-    </div>
-    {{/each}}
-  {{!-- </div> --}}
-{{/if}}
-
 </div>
 
 <script src="./js/profile.js"></script>

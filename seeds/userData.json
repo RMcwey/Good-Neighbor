@@ -22,21 +22,5 @@
     "password": "password12345",
     "unit_number": 3070,
     "mobile_number": 7703456789
-  },
-  {
-    "id": 4,
-    "name": "Patrick",
-    "email": "patrick.f.ham@gmail.com",
-    "password": "password12345",
-    "unit_number": 1156,
-    "mobile_number": 7705962140
-  },
-  {
-    "id": 5,
-    "name": "Ross",
-    "email": "rmcwey@gmail.com",
-    "password": "password12345",
-    "unit_number": 9876,
-    "mobile_number": 7704567890
   }
 ]

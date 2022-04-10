@@ -4,25 +4,11 @@ const Genre = require('./MovieGenre');
 const Rating = require('./MovieRating');
 
 User.hasMany(Movie, {
-  as: 'test1',
-  foreignKey: 'contributor'
+  foreignKey: 'movie_contributor'
 });
 
-Movie.hasOne(User, {
-  as: 'test2',
-  foreignKey: 'contributor',
-  constraints: false
-});
-
-User.hasMany(Movie, {
-  as: 'test3',
-  foreignKey: 'borrower',
-  constraints: false
-})
-
-Movie.hasOne(User, {
-  as: "test4",
-  foreignKey: 'borrower',
+Movie.belongsTo(User, {
+  foreignKey: 'movie_contributor',
   constraints: false
 });
 
