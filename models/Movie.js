@@ -52,14 +52,14 @@ Movie.init(
       allowNull: false,
       defaultValue: true,
     },
-    movie_contributor: {
+    contributor: {
       type: DataTypes.INTEGER,
       references: {
         model: 'users',
         key: 'id',
       },
     },
-    current_holder: {
+    borrower: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
