@@ -8,9 +8,18 @@ User.hasMany(Movie, {
 });
 
 Movie.belongsTo(User, {
-  foreignKey: 'movie_contributor',
-  constraints: false
+  foreignKey: 'movie_contributor'
 });
+
+/* 
+User.hasMany(Movie, {
+  foreignKey: 'current_holder'
+});
+
+Movie.belongsTo(User, {
+  foreignKey: 'current_holder',
+  constraints: false
+}); */
 
 Movie.hasOne(Genre, {
   foreignKey: 'genre_id',

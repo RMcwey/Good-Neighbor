@@ -35,24 +35,41 @@
     </form>
   </div>
 
-  {{#if movies.length}}
-  <div class="col-md-6 movie-list">
-    <h3>Your movies on The Shelf:</h3>
+  <div class="col-md-6">
+    {{#if movies.length}}
+    <div class="movie-list listed-movies">
+      <h3>Movies you've LENT to The Shelf:</h3>
 
-    {{#each movies as |movie|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a></h4>
+      {{#each movies as |movie|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h4><a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">DELETE</button>
+        </div>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">DELETE</button>
-      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
+    {{/if}}
 
-  
+    {{!-- {{#if borrowedmovies.length}} --}}
+    <div class="movie-list borrowed-movies">
+      <h3>Movies your BORROWING from The Shelf:</h3>
+
+      {{#each borrowedmovies as |borrowedmovie|}}
+      <div class="row mb-2">
+        <div class="col-md-8">
+          <h4><a href="/movie/{{borrowedmovie.movie_id}}">{{borrowedmovie.movie_name}}</a></h4>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-sm btn-danger" data-id="{{borrowedmovie.movie_id}}">DELETE</button>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{!-- {{/if}} --}}
+  </div>
 
 </div>
 
