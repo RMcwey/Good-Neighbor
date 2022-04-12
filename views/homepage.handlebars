@@ -1,27 +1,29 @@
-<!-- Loop over each object in the projects array -->
-{{#each movies as |movie| }}
-{{#if movie.is_available}}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
+
+
+<div class="container mt-5 mb-3">
+    <div class="row">
+      {{#each movies as |movie| }}
+        <div class="col-md-4">
+            <div class="card p-3 mb-2">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
+                        <div class="ms-2 c-details">
+                                                           <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a>
     </h2>
-    <p>
-      Movie Released in Year: {{movie.publish_year}}
-    </p>
-
-    {{#if ../logged_in}}
-    <p>This is on {{user.name}}'s shelf.</p>
-    {{/if}}
-
-  </div>
-  <div class="col-md-7">
-    <p>
+                        </div>
+                    </div>
+                    <div class="badge"> <span>Design</span> </div>
+                </div>
+                 <h5 class="heading">Movie Released in Year: {{movie.publish_year}}</h5>
+                <p>
       {{movie.movie_description}}
-    </p>
-  </div>
+    </p>   
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
-{{/if}}
-{{/each}}
