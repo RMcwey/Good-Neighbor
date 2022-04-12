@@ -57,6 +57,7 @@ Movie.init(
       references: {
         model: 'users',
         key: 'id',
+        as: 'lender'
       },
     },
     current_holder: {
@@ -66,6 +67,7 @@ Movie.init(
       references: {
         model: 'users',
         key: 'id',
+        as: 'borrower'
       },
     },
   },

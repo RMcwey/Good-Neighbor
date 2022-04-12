@@ -60,8 +60,24 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+    const borrowedMovieData = await Movie.findAll({
+      attributes: ['movie_id', 'movie_name', 'current_holder'],
+      where: {
+        current_holder: req.session.user_id
+      }
+    }).catch((err) => {
+      res.json(err);
+    });
+      const borrowedMovies = borrowedMovieData.map((data) => data.get({ plain: true }));
+
+    console.log("Data for 'user':")
+    console.log(user);
+    console.log("Data for 'borrowedMovies':");
+    console.log(borrowedMovies);
+
     res.render('profile', {
       ...user,
+      borrowedMovies,
       logged_in: true
     });
   } catch (err) {
