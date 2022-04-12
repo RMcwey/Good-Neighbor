@@ -1,4 +1,23 @@
-header, .project:not(:last-child) {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* back ground color for body of website*/
+html,
+body {
+  background: #e2e5e3;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #e2e5e3, #e2e5e3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #e2e5e3, #e2e5e3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -17,8 +36,21 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.home_banner_area {
+  z-index: 1;
+  min-height: 900px;
+  position: relative;
+  background-image: url(home-banner.jpg);
+  background-color: black;
+  background-size: cover;
+  opacity: 0.6;
+}
+header {
+  background: rgb(192, 190, 190);
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 3.5em;
+  font-family: 'Pacifico', serif;
+  color: white;
 }

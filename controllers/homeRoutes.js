@@ -60,7 +60,42 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+    const borrowedMovieData = await Movie.findAll({
+      attributes: ['movie_id', 'movie_name', 'current_holder'],
+      where: {
+        current_holder: req.session.user_id
+      }
+    }).catch((err) => {
+      res.json(err);
+    });
+      const borrowedMovies = borrowedMovieData.map((data) => data.get({ plain: true }));
+
+    console.log("Data for 'user':")
+    console.log(user);
+    console.log("Data for 'borrowedMovies':");
+    console.log(borrowedMovies);
+
     res.render('profile', {
+      ...user,
+      borrowedMovies,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/profile/borrowing', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Movie }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('borrowing', {
       ...user,
       logged_in: true
     });
@@ -68,6 +103,26 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/profile/lending', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Movie }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('lending', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
