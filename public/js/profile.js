@@ -40,11 +40,54 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const returnButtonHandler = (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const movie_id = event.target.getAttribute('data-id');
+    userId();
+    function userId(){ fetch(`/api/movies/${movie_id}`, {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res) => res.json()
+      ).then(data => {
+        response(data.movie_contributor)
+      });
+    }
+    function response(data) { 
+      fetch(`/api/movies/${movie_id}`, { 
+          method: 'PUT',
+          body: JSON.stringify({
+            'is_available': true,
+            'current_holder': `${data}`,
+          }),
+          headers: { 
+            'Content-Type': 'application/json' 
+          },
+        }).then((res) => res.json()
+        ).then(completeData => {
+        console.log(completeData); 
+        document.location.reload();
+        });
+    }
+
+    // if (response.ok) {
+    //   document.location.replace('/profile');
+    // } else {
+    //   alert('Failed to delete MOVIE');
+    // }
+  }
+};
+
 
 document
   .querySelector('.new-movie-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.movie-list')
+  .querySelector('.listed-movies')
   .addEventListener('click', delButtonHandler);
+
+document
+.querySelector('.borrowed-movies')
+.addEventListener('click', returnButtonHandler);
