@@ -22,5 +22,29 @@
     "password": "password12345",
     "unit_number": 3070,
     "mobile_number": 7703456789
+  },
+  {
+    "id": 4,
+    "name": "Ross",
+    "email": "rmcwey@gmail.com",
+    "password": "password12345",
+    "unit_number": 1234,
+    "mobile_number": 7704567890
+  },
+  {
+    "id": 5,
+    "name": "Patrick",
+    "email": "patrick.f.ham@gmail.com",
+    "password": "password12345",
+    "unit_number": 1676,
+    "mobile_number": 7705962140
+  },
+  {
+    "id": 6,
+    "name": "Malika",
+    "email": "coolbeans@gmail.com",
+    "password": "password12345",
+    "unit_number": 6777,
+    "mobile_number": 7705678901
   }
 ]
