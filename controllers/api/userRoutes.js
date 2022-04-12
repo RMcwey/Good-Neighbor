@@ -12,7 +12,7 @@ router.get('/', async (req,res) => {
   }
 })
 
-router.get('/profile', (req, res) => {
+router.get('/profile', withAuth, (req, res) => {
   // console.log(req.session.user_id);
     // Find the logged in user based on the session ID
     const userData = req.session.user_id

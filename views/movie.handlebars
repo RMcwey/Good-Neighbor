@@ -6,9 +6,13 @@
     Movie released in: 
     <span class="dollar-amount">{{publish_year}}</span>.
   </p>
-  <p>Located on {{user.name}}'s shelf.</p>
+  <p>Original Contributor {{user.name}}.</p>
+  {{#unless is_available}}
   <p>Borrowed by {{current_holder}}</p>
+  {{/unless}}
+  {{#if is_available}}
   <p>Contact {{user.name}} at Unit # {{user.unit_number}} <br>Or call their mobile at {{user.mobile_number}}</p>
+  {{/if}}
   <p>
     {{#unless is_available}}
     <button id="return-button" class="btn btn-primary return-movie" data-id="{{movie_id}}">Return Movie</button>
