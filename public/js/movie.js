@@ -24,14 +24,10 @@ const borrowMovie = (event) => {
           },
         }).then((res) => res.json()
         ).then(completeData => {
-      console.log(completeData) 
-      })
+        console.log(completeData);
+        document.location.reload();
+        })
     }
-  // if (response.ok) {
-  //   document.location.replace('/profile');
-  // } else {
-  //   alert('Failed to update movie.');
-  // }
 }};
 
 const returnMovie = (event) => {
@@ -60,20 +56,18 @@ const returnMovie = (event) => {
           },
         }).then((res) => res.json()
         ).then(completeData => {
-        console.log(completeData) 
+        console.log(completeData); 
+        document.location.reload();
         });
     }
-  // if (response.ok) {
-  //   document.location.replace('/profile');
-  // } else {
-  //   alert('Failed to update movie.');
-  // }
 }};
 
+if (document.querySelector('#return-button')) {
 document
   .querySelector('#return-button')
   .addEventListener('click', returnMovie);
-
+} else{
   document
   .querySelector('#borrow-button')
   .addEventListener('click', borrowMovie);
+}
