@@ -54,3 +54,7 @@ header {
   font-family: 'Pacifico', serif;
   color: white;
 }
+
+.hide {
+  display: none;
+}

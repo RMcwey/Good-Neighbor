@@ -51,5 +51,9 @@ module.exports = {
   ifCondTwo: (v1, v2, v3, options) => {
     return (v1 && v2 !== v3) ? options.fn(this) : options.inverse(this);
   
+  },
+  ifCondThree: (v1, v2, v3, options) => {
+    return (!v1 && v2 === v3) ? options.fn(this) : options.inverse(this);
+  
   }
 };
