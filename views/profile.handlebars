@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-auto row bg-white p-0 card">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="row">
+  <div class="col-md-6 justify-center-md card bg-light p-0">
     <h3>Add a new movie to your shelf:</h3>
 
     <form class="form new-movie-form">
@@ -35,27 +35,27 @@
     </form>
   </div>
 
-  <div class="col-md-6">
-    {{#if movies.length}}
-    <div class="movie-list listed-movies">
-      <h3>Movies you've LENT to The Shelf:</h3>
+  {{#if movies.length}}
+  <div class="col-md-auto movie-list bg-light card p-2 justify-center-md my-auto">
+    <h3>Movies currenly on your shelf:</h3>
 
-      {{#each movies as |movie|}}
-      <div class="row mb-2">
-        <div class="col-md-8">
-          <h4><a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a></h4>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">DELETE</button>
-        </div>
+    {{#each movies as |movie|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a></h4>
       </div>
-      {{/each}}
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">DELETE</button>
+      </div>
     </div>
-    {{/if}}
+    {{/each}}
+  </div>
+  {{/if}}
 
-    {{!-- {{#if borrowedmovies.length}} --}}
-    <div class="movie-list borrowed-movies">
-      <h3>Movies your BORROWING from The Shelf:</h3>
+  {{!-- {{#if borrowedmovies.length}} --}}
+  <div class="movie-list borrowed-movies">
+    <h3>Movies your BORROWING from The Shelf:</h3>
+
 
       {{#each borrowedMovies as |borrowedMovie|}}
       <div class="row mb-2">
@@ -66,10 +66,11 @@
           <button class="btn btn-sm btn-info" data-id="{{borrowedMovie.movie_id}}">RETURN</button>
         </div>
       </div>
-      {{/each}}
     </div>
-    {{!-- {{/if}} --}}
+    {{/each}}
   </div>
+  {{!-- {{/if}} --}}
+</div>
 
 </div>
 
