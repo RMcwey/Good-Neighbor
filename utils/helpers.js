@@ -22,34 +22,4 @@ module.exports = {
       return `<span for="img" aria-label="star eyes">🤩</span>`;
     }
   },
-  ifCond: (v1, operator, v2, options) => {
-    switch (operator) {
-      case '==':
-          return (v1 == v2) ? options.fn(this) : options.inverse(this);
-      case '===':
-          return (v1 === v2) ? options.fn(this) : options.inverse(this);
-      case '!=':
-          return (v1 != v2) ? options.fn(this) : options.inverse(this);
-      case '!==':
-          return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-      case '<':
-          return (v1 < v2) ? options.fn(this) : options.inverse(this);
-      case '<=':
-          return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-      case '>':
-          return (v1 > v2) ? options.fn(this) : options.inverse(this);
-      case '>=':
-          return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-      case '&&':
-          return (v1 && v2) ? options.fn(this) : options.inverse(this);
-      case '||':
-          return (v1 || v2) ? options.fn(this) : options.inverse(this);
-      default:
-          return options.inverse(this);
-  }
-  },
-  ifCondTwo: (v1, v2, v3, options) => {
-    return (v1 && v2 !== v3) ? options.fn(this) : options.inverse(this);
-  
-  }
 };
