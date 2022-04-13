@@ -17,9 +17,11 @@
     {{#unless is_available}}
     <button id="return-button" class="btn btn-primary return-movie" data-id="{{movie_id}}">Return Movie</button>
     {{/unless}}
-    {{#if is_available}}
+    
+    {{#ifCondTwo is_available user.name username}}
     <button id="borrow-button" class="btn btn-primary borrow-movie" data-id="{{movie_id}}">Borrow Movie</button>
-    {{/if}}
+    {{/ifCondTwo}}
+  
   </p>
 </div>
 
