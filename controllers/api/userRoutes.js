@@ -13,23 +13,9 @@ router.get('/', async (req,res) => {
 })
 
 router.get('/profile', withAuth, (req, res) => {
-  // console.log(req.session.user_id);
     // Find the logged in user based on the session ID
-    const userData = req.session.user_id
+    const userData = req.session.username
     res.json(userData);
-    
-
-    // const user = userData.get({ plain: true });
-    //   console.log(user)
-    // res.status(200).json(user)
-  
-    // return res.json(user)
-  //   res.render('profile', {
-  //     ...user,
-  //     logged_in: true
-  //   });
-  
-
 });
 
 router.post('/', async (req, res) => {
@@ -38,6 +24,7 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
+      req.session.username = userData.name;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -69,6 +56,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
+      req.session.username = userData.name;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
