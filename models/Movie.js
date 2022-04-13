@@ -61,14 +61,9 @@ Movie.init(
       },
     },
     current_holder: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
       defaultValue: null,
-      references: {
-        model: 'users',
-        key: 'id',
-        as: 'borrower'
-      },
     },
   },
   {
