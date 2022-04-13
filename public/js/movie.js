@@ -1,6 +1,8 @@
 const borrowMovie = (event) => {
   if (event.target.hasAttribute('data-id')) {
-    const movie_id = event.target.getAttribute('data-id');
+    // const movie_id2 = event.target.getAttribute('data-id');
+    const movie_id2 = document.querySelector('#test').innerHTML;
+    const movie_id = parseInt(movie_id2)
     userId();
     function userId(){ fetch(`/api/users/profile`, {
       method: 'GET',
@@ -32,7 +34,9 @@ const borrowMovie = (event) => {
 
 const returnMovie = (event) => {
   if (event.target.hasAttribute('data-id')) {
-    const movie_id = event.target.getAttribute('data-id');
+    // const movie_id = event.target.getAttribute('data-id');
+    const movie_id2 = document.querySelector('#test').innerHTML;
+    const movie_id = parseInt(movie_id2)
     userId();
     function userId(){ fetch(`/api/movies/${movie_id}`, {
       method: 'GET',
@@ -66,7 +70,7 @@ if (document.querySelector('#return-button')) {
 document
   .querySelector('#return-button')
   .addEventListener('click', returnMovie);
-} else{
+} else if (document.querySelector('#borrow-button')) {
   document
   .querySelector('#borrow-button')
   .addEventListener('click', borrowMovie);
