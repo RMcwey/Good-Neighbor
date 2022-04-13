@@ -3,6 +3,7 @@
 <div class="container mt-5 mb-3">
     <div class="row">
       {{#each movies as |movie| }}
+        {{#if movie.is_available}}
         <div class="col-md-4">
             <div class="card p-3 mb-2">
                 <div class="d-flex justify-content-between">
@@ -24,6 +25,7 @@
     </p>   
             </div>
         </div>
+        {{/if}}
         {{/each}}
     </div>
 </div>
