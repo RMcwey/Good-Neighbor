@@ -32,50 +32,42 @@
 </head>
 
 <body>
+  <header>
 
-  <nav class="d-flex navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand pl-3" href="/">The Shelf</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- nav for my website-->
+    <nav class="d-flex navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand pl-3" href="/">The Shelf</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- nav for my website-->
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="/">Home</a>
-        <a class="nav-item nav-link" href="/about">About</a>
-        {{#if logged_in}}
-        <a class="nav-item nav-link" href="/profile">My Shelf </a>
-        <br>
-        <button class="no-button nav-item nav-link " id="logout">Logout</button>
-        {{else}}
-        <a class="nav-item nav-link" href="/login">Login</a>
-        {{/if}}
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/theshelf">The Shelf</a>
+          {{#if logged_in}}
+          <a class="nav-item nav-link" href="/profile">My Shelf </a>
+          <br>
+          <button class="no-button nav-item nav-link " id="logout">Logout</button>
+          {{else}}
+          <a class="nav-item nav-link" href="/login">Login</a>
+          {{/if}}
+        </div>
       </div>
-    </div>
-    </ul>
-    <!-- Conditionally render login or logout links -->
-  </nav>
-
-  <div class="container text-center text-light text-align-center col-md-12" id="bannerimage">
-    <div class="content">
-      <h1>Welcome to the Shelf</h1>
-      <p>A space where you can share your favorite movies with your Neighbors.</p>
-    </div>
-  </div>
+      </ul>
+      <!-- Conditionally render login or logout links -->
+    </nav>
   </header>
 
-  <main class="container-fluid mt-5 bg-black" id="bottomimage">
-    <!-- Render the sub layout -->
+  <main class="container-fluid mt-5 bg-black">
     {{{ body }}}
   </main>
-  <footer>
-    <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf
 
-    </div>
+  <footer>
+    <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf</div>
   </footer>
-  </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}

@@ -13,8 +13,10 @@
   {{#unless is_available}}
   <p>Borrowed by {{current_holder}}</p>
   {{/unless}}
+  {{#if logged_in}}
   {{#if is_available}}
   <p>Contact {{user.name}} at Unit # {{user.unit_number}} <br>Or call their mobile at {{user.mobile_number}}</p>
+  {{/if}}
   {{/if}}
   <p>
     {{#ifCondThree is_available current_holder username}}
@@ -27,6 +29,10 @@
   
   </p>
   {{/if}}
+    {{#unless logged_in}}
+    <a href="/login" id="signup-login button" class="btn btn-primary signup-login button">Signup or Login to Borrow</a>
+    {{/unless}}
+
 </div>
 
 <script src="/js/movie.js"></script>
