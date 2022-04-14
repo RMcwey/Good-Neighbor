@@ -27,6 +27,10 @@
   
   </p>
   {{/if}}
+  {{#unless logged_in}}
+  <a href="/login" id="go-to-signup" class="btn btn-primary signup-button">SignIn / Login to Borrow</a>
+  {{/unless}}
+
 </div>
 
 <script src="/js/movie.js"></script>

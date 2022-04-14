@@ -66,6 +66,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="/">Home</a>
       <a class="nav-item nav-link" href="/about">About</a>
+      <a class="nav-item nav-link" href="/theshelf">The Shelf</a>
        {{#if logged_in}}
         <a class="nav-item nav-link"href="/profile">My Shelf </a>
         <br>
@@ -82,31 +83,10 @@
 </nav>
     </header>
 
-    
-    <section class="home_banner_area">
-      <div class="banner_inner">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="banner_content text-center">
-                <p class="text-uppercase">
-                  Weclome The Shelf
-                </p>
-                <h2 class="text-uppercase mt-4 mb-5">
-                  Where you can share movies with your neighbors around you!
-                </h2>
-                <div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
-    </main>
+
+
     <footer>
       <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf 
   
