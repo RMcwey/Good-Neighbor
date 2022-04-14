@@ -7,6 +7,8 @@
     Movie released in:
     <span class="dollar-amount">{{publish_year}}</span>.
   </p>
+
+  {{#if logged_in}}
   <p>Original Contributor {{user.name}}.</p>
   {{#unless is_available}}
   <p>Borrowed by {{current_holder}}</p>
@@ -24,6 +26,7 @@
     {{/ifCondTwo}}
   
   </p>
+  {{/if}}
 </div>
 
 <script src="/js/movie.js"></script>
