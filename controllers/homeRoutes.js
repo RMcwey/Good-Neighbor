@@ -4,6 +4,15 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+    
+    res.render('landingpage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/theshelf', async (req, res) => {
+  try {
     // Get all movies and JOIN with user data
     const MovieData = await Movie.findAll({
       include: [
@@ -27,6 +36,15 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/about', async (req, res) => {
+  try {
+    
+    res.render('aboutus');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
@@ -42,7 +60,8 @@ router.get('/movie/:id', async (req, res) => {
 
     res.render('movie', {
       ...movie,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      username: req.session.username
     });
   } catch (err) {
     res.status(500).json(err);
@@ -63,7 +82,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const borrowedMovieData = await Movie.findAll({
       attributes: ['movie_id', 'movie_name', 'current_holder'],
       where: {
-        current_holder: req.session.user_id
+        current_holder: req.session.username
       }
     }).catch((err) => {
       res.json(err);

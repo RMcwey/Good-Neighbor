@@ -66,3 +66,7 @@ header {
   margin: 0% auto;
   background-color: transparent;
 }
+
+.hide {
+  display: none;
+}
