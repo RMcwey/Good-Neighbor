@@ -4,6 +4,15 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+    
+    res.render('landingpage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/theshelf', async (req, res) => {
+  try {
     // Get all movies and JOIN with user data
     const MovieData = await Movie.findAll({
       include: [
@@ -22,6 +31,15 @@ router.get('/', async (req, res) => {
       movies, 
       logged_in: req.session.logged_in 
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/about', async (req, res) => {
+  try {
+    
+    res.render('aboutus');
   } catch (err) {
     res.status(500).json(err);
   }
