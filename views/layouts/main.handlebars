@@ -41,65 +41,37 @@
     </button>
     <!-- nav for my website-->
 
-<<<<<<< HEAD
-    <div
-    class="collapse navbar-collapse justify-content-end"
-    id="navbarNavAltMarkup"
-  >
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home</a>
-      <a class="nav-item nav-link" href="/about">About</a>
-      <a class="nav-item nav-link" href="/theshelf">The Shelf</a>
-       {{#if logged_in}}
-        <a class="nav-item nav-link"href="/profile">My Shelf </a>
-=======
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/">Home</a>
         <a class="nav-item nav-link" href="/about">About</a>
+        <a class="nav-item nav-link" href="/theshelf">The Shelf</a>
         {{#if logged_in}}
-        <a class="nav-item nav-link" href="/profile">My Shelf </a>
->>>>>>> main
-        <br>
-        <button class="no-button nav-item nav-link " id="logout">Logout</button>
-        {{else}}
-        <a class="nav-item nav-link" href="/login">Login</a>
-        {{/if}}
+        <a class="nav-item nav-link"href="/profile">My Shelf </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <br>
+          <button class="no-button nav-item nav-link " id="logout">Logout</button>
+          {{else}}
+          <a class="nav-item nav-link" href="/login">Login</a>
+          {{/if}}
+        </div>
       </div>
     </div>
-    </ul>
     <!-- Conditionally render login or logout links -->
   </nav>
-
-  <div class="container text-center text-light text-align-center col-md-12" id="bannerimage">
-    <div class="content">
-      <h1>Welcome to the Shelf</h1>
-      <p>A space where you can share your favorite movies with your Neighbors.</p>
-    </div>
-  </div>
   </header>
-
-<<<<<<< HEAD
+  
+  <main>
       <!-- Render the sub layout -->
       {{{ body }}}
 
-
-    <footer>
-      <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf 
-  
-        </div>
-    </footer>
-=======
-  <main class="container-fluid mt-5 bg-black" id="bottomimage">
-    <!-- Render the sub layout -->
-    {{{ body }}}
   </main>
+
   <footer>
     <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf
 
     </div>
   </footer>
->>>>>>> main
   </div>
 
   <!-- Render script for logged in users only -->
