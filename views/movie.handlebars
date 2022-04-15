@@ -1,21 +1,17 @@
-<div class="text-center col-md-3 movie-list bg-light card p-3">
+<div class="text-center col-md-3 movie-list bg-light card p-3 mt-5">
   <h2>{{movie_name}}</h2>
-  <p>{{{get_emoji}}}</p>
+  <p>{{{get_emoji movie_genre}}}<br>Released: {{publish_year}}</p>
   <p>{{movie_description}}</p>
   <p id="test" class="hide">{{movie_id}}</p>
-  <p>
-    Movie released in:
-    <span class="dollar-amount">{{publish_year}}</span>.
-  </p>
 
   {{#if logged_in}}
-  <p>Original Contributor {{user.name}}.</p>
+  <p>Lender:   {{user.name}}.</p>
   {{#unless is_available}}
-  <p>Borrowed by {{current_holder}}</p>
+  <p>Borrowed by:   {{current_holder}}</p>
   {{/unless}}
   {{#if logged_in}}
   {{#if is_available}}
-  <p>Contact {{user.name}} at Unit # {{user.unit_number}} <br>Or call their mobile at {{user.mobile_number}}</p>
+  <p>Contact {{user.name}} at Unit #{{user.unit_number}} <br>Or call their mobile at {{{format_mobile_number user.mobile_number}}}</p>
   {{/if}}
   {{/if}}
   <p>
