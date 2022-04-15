@@ -5,7 +5,9 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     
-    res.render('landingpage');
+    res.render('landingpage', {
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -28,7 +30,7 @@ router.get('/theshelf', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      movies, 
+      movies,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -39,7 +41,9 @@ router.get('/theshelf', async (req, res) => {
 router.get('/about', async (req, res) => {
   try {
     
-    res.render('aboutus');
+    res.render('aboutus', {
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -97,44 +101,6 @@ router.get('/profile', withAuth, async (req, res) => {
     res.render('profile', {
       ...user,
       borrowedMovies,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/profile/borrowing', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Movie }],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('borrowing', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/profile/lending', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Movie }],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('lending', {
-      ...user,
       logged_in: true
     });
   } catch (err) {

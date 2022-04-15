@@ -7,21 +7,40 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
-  get_emoji: () => {
-    const randomNum = Math.random();
+  get_emoji: (genreCode) => {
+    const passedGenreCode = genreCode;
 
-// THESE WILL BE RE-WRITTEN TO DISPLAY A SPECIFIC EMOJI WITH THE MEDIA TYPE
-
-
-    // Return a random emoji
-    if (randomNum > 0.7) {
-      return `<span for="img" aria-label="smiley face">😁</span>`;
-    } else if (randomNum > 0.4) {
-      return `<span for="img" aria-label="party hat">🥳</span>`;
-    } else {
-      return `<span for="img" aria-label="star eyes">🤩</span>`;
+    switch (passedGenreCode) {
+      case 1:
+        // console.log('Genre Emoji is DRAMA (faces).')
+        return `<span for="img" aria-label="drama faces">🎭</span>`;
+      case 2:
+        // console.log('Genre Emoji is Comedy (laughing).')
+        return `<span for="img" aria-label="laughing tears">😂</span>`;
+      case 3:
+        // console.log('Genre Emoji is ACTION (faces).')
+        return `<span for="img" aria-label="bomb">💣</span>`;
+      case 4:
+        // console.log('Genre Emoji is FANTASY (unicorn).')
+        return `<span for="img" aria-label="unicorn">🦄</span>`;
+      case 5:
+        // console.log('Genre Emoji is HORROR (ghost).')
+        return `<span for="img" aria-label="ghost">👻</span>`;
+      case 6:
+        // console.log('Genre Emoji is ROMANCE (hearteyes).')
+        return `<span for="img" aria-label="heart eyes">😍</span>`;
+      case 7:
+        // console.log('Genre Emoji is WESTERN (cactusscene).')
+        return `<span for="img" aria-label="cactus western">🏜️</span>`;
+      case 8:
+        // console.log('Genre Emoji is THRILLER (scaredface).')
+        return `<span for="img" aria-label="scared face">😱</span>`;
+      case 9:
+        // console.log('Genre Emoji is OTHER (hmmface).')
+        return `<span for="img" aria-label="hmm face">🤔</span>`;
     }
   },
+
   ifCond: (v1, operator, v2, options) => {
     switch (operator) {
       case '==':
@@ -48,12 +67,13 @@ module.exports = {
           return options.inverse(this);
   }
   },
+
   ifCondTwo: (v1, v2, v3, options) => {
     return (v1 && v2 !== v3) ? options.fn(this) : options.inverse(this);
   
   },
+
   ifCondThree: (v1, v2, v3, options) => {
     return (!v1 && v2 === v3) ? options.fn(this) : options.inverse(this);
-  
   }
 };

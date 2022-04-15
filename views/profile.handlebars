@@ -46,14 +46,14 @@
           <h4><a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a></h4>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">DELETE</button>
+          <button id="remove-button" class="btn btn-sm btn-danger" data-id="{{movie.movie_id}}">REMOVE</button>
         </div>
       </div>
       {{/each}}
     </div>
     {{/if}}
 
-    {{!-- {{#if borrowedmovies.length}} --}}
+    {{#if borrowedMovies.length}}
     <div class="movie-list borrowed-movies">
       <h3>Movies your BORROWING from The Shelf:</h3>
 
@@ -63,12 +63,12 @@
           <h4><a href="/movie/{{borrowedMovie.movie_id}}">{{borrowedMovie.movie_name}}</a></h4>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-sm btn-info" data-id="{{borrowedMovie.movie_id}}">RETURN</button>
+          <button id="return-button" class="btn btn-sm btn-info" data-id="{{borrowedMovie.movie_id}}">RETURN</button>
         </div>
       </div>
       {{/each}}
     </div>
-    {{!-- {{/if}} --}}
+    {{/if}}
   </div>
 
 </div>
