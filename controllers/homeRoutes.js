@@ -30,7 +30,7 @@ router.get('/theshelf', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      movies, 
+      movies,
       logged_in: req.session.logged_in 
     });
   } catch (err) {

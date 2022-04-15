@@ -41,6 +41,7 @@ const delButtonHandler = async (event) => {
 };
 
 const returnButtonHandler = (event) => {
+  console.log("RETURN button was pressed.");
   if (event.target.hasAttribute('data-id')) {
     const movie_id = event.target.getAttribute('data-id');
     userId();
@@ -84,10 +85,21 @@ document
   .querySelector('.new-movie-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.listed-movies')
-  .addEventListener('click', delButtonHandler);
-
-document
-.querySelector('.borrowed-movies')
-.addEventListener('click', returnButtonHandler);
+  
+  if (document.querySelector('#remove-button')) {
+    document
+    .querySelector('#remove-button')
+    .addEventListener('click', delButtonHandler);
+  } else if (document.querySelector('#return-button')) {
+    document
+    .querySelector('#return-button')
+    .addEventListener('click', returnButtonHandler);
+  }
+  
+  /* document
+    .querySelector('#remove-button')
+    .addEventListener('click', delButtonHandler);
+  
+  document
+  .querySelector('#return-button')
+  .addEventListener('click', returnButtonHandler); */
