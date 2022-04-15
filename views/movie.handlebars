@@ -16,11 +16,11 @@
   {{/if}}
   <p>
     {{#ifCondThree is_available current_holder username}}
-    <button id="return-button" class="btn btn-primary return-movie" data-id="{{movie_id}}">Return Movie</button>
+    <button id="" class="btn btn-primary" data-toggle="modal" data-target="#returnModal" data-id='{{movie_id}}'>Return Movie</button>
     {{/ifCondThree}}
     
     {{#ifCondTwo is_available user.name username}}
-    <button id="borrow-button" class="btn btn-primary borrow-movie" data-id='{{movie_id}}'>Borrow Movie</button>
+    <button id="" class="btn btn-primary" data-toggle="modal" data-target="#borrowModal" data-id='{{movie_id}}'>Borrow Movie</button>
     {{/ifCondTwo}}
   
   </p>
@@ -29,6 +29,62 @@
     <a href="/login" id="signup-login button" class="btn btn-primary signup-login button">Signup or Login to Borrow</a>
     {{/unless}}
 
+</div>
+
+{{!-- MODAL for BORROWING --}}
+<div class="modal fade" id="borrowModal" tabindex="-1" role="dialog" aria-labelledby="borrowModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="borrowModalLabel">Want to BORROW {{movie_name}}?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Lender Info: {{#unless logged_in}} (only avaiable to registered users) {{/unless}}</h3>
+        {{#if logged_in}}
+        <p>Lender's Name:  {{user.name}} </p>
+        <p>Unit #{{user.unit_number}}</p>
+        <p>Email:  {{user.email}}</p>
+        <p>Mobile:  {{format_mobile_number user.mobile_number}}</p>
+        {{/if}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind.</button>
+        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">Email {{user.name}}</a>
+        <button type="button" class="btn btn-success borrow-movie" id="borrow-button" data-id="{{movie_id}}">Mark as "BORROWED"</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- MODAL for RETURNING --}}
+<div class="modal fade" id="returnModal" tabindex="-1" role="dialog" aria-labelledby="returnModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="returnModalLabel">Want to RETURN {{movie_name}}?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Lender Info: {{#unless logged_in}} (only avaiable to registered users) {{/unless}}</h3>
+        {{#if logged_in}}
+        <p>Lender's Name:  {{user.name}} </p>
+        <p>Unit #{{user.unit_number}}</p>
+        <p>Email:  {{user.email}}</p>
+        <p>Mobile:  {{format_mobile_number user.mobile_number}}</p>
+        {{/if}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind.</button>
+        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">Email {{user.name}}</a>
+        <button type="button" class="btn btn-success return-movie" id="return-button" data-id="{{movie_id}}">Mark as "RETURNED"</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="/js/movie.js"></script>

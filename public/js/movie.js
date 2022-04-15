@@ -66,12 +66,11 @@ const returnMovie = (event) => {
     }
 }};
 
-if (document.querySelector('#return-button')) {
+
 document
   .querySelector('#return-button')
   .addEventListener('click', returnMovie);
-} else if (document.querySelector('#borrow-button')) {
-  document
+
+document
   .querySelector('#borrow-button')
   .addEventListener('click', borrowMovie);
-}
