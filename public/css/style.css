@@ -85,6 +85,14 @@ header {
   border-radius: 25px;
 }
 
+.welcome-profile {
+  background-color: darkslategrey;
+  color: azure;
+  background: rgba(52, 58, 64, 0.8);
+  padding: 5px 37px;
+  /* border-radius: 25px; */
+}
+
 .abouthead {
   background-image: url(../images/aboutus.jpg);
   background-position: center;
