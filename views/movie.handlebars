@@ -11,7 +11,7 @@
   {{/unless}}
   {{#if logged_in}}
   {{#if is_available}}
-  <p>Contact {{user.name}} at Unit #{{user.unit_number}} <br>Or call their mobile at {{{format_mobile_number user.mobile_number}}}</p>
+  {{!-- <p>Contact {{user.name}} at Unit #{{user.unit_number}} <br>Or call their mobile at {{{format_mobile_number user.mobile_number}}}</p> --}}
   {{/if}}
   {{/if}}
   <p>
@@ -33,10 +33,10 @@
 
 {{!-- MODAL for BORROWING --}}
 <div class="modal fade" id="borrowModal" tabindex="-1" role="dialog" aria-labelledby="borrowModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="borrowModalLabel">Want to BORROW {{movie_name}}?</h5>
+        <h5 class="modal-title" id="borrowModalLabel">Want to BORROW '{{movie_name}}'?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -51,9 +51,9 @@
         {{/if}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind.</button>
-        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">Email {{user.name}}</a>
-        <button type="button" class="btn btn-success borrow-movie" id="borrow-button" data-id="{{movie_id}}">Mark as "BORROWED"</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">😐 Nevermind</button>
+        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">📧 Email {{user.name}}</a>
+        <button type="button" class="btn btn-success borrow-movie" id="borrow-button" data-id="{{movie_id}}">✅ Mark as "BORROWED"</button>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@
 
 {{!-- MODAL for RETURNING --}}
 <div class="modal fade" id="returnModal" tabindex="-1" role="dialog" aria-labelledby="returnModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="returnModalLabel">Want to RETURN {{movie_name}}?</h5>
@@ -79,9 +79,9 @@
         {{/if}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind.</button>
-        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">Email {{user.name}}</a>
-        <button type="button" class="btn btn-success return-movie" id="return-button" data-id="{{movie_id}}">Mark as "RETURNED"</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">😐 Nevermind.</button>
+        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">📧 Email {{user.name}}</a>
+        <button type="button" class="btn btn-success return-movie" id="return-button" data-id="{{movie_id}}">✅Mark as "RETURNED"</button>
       </div>
     </div>
   </div>
