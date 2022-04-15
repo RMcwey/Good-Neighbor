@@ -1,31 +1,32 @@
 
-
-<div class="container mt-5 mb-3" id="bottomimage">
-    <div class="row">
-      {{#each movies as |movie| }}
-        {{#if movie.is_available}}
-        <div class="col-md-4">
-            <div class="card p-3 mb-2">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
-                        <div class="ms-2 c-details">
-                                                           <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji movie.movie_genre}}}
-      <a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a>
-    </h2>
+<div id="bottomimage" class="col-12 m-0 p-0">
+    <div class="container mt-0 mb-0">
+        <div class="row">
+        {{#each movies as |movie| }}
+            {{#if movie.is_available}}
+            <div class="col-md-4">
+                <div class="card p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
+                            <div class="ms-2 c-details">
+                                                            <h2>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+        {{{get_emoji movie.movie_genre}}}
+        <a href="/movie/{{movie.movie_id}}">{{movie.movie_name}}</a>
+        </h2>
+                            </div>
                         </div>
+                        {{!-- <div class="badge"> <span>Design</span> </div> --}}
                     </div>
-                    <div class="badge"> <span>Design</span> </div>
+                    <h5 class="heading">Movie Released in Year: {{movie.publish_year}}</h5>
+                    <p>
+        {{movie.movie_description}}
+        </p>   
                 </div>
-                 <h5 class="heading">Movie Released in Year: {{movie.publish_year}}</h5>
-                <p>
-      {{movie.movie_description}}
-    </p>   
             </div>
+            {{/if}}
+            {{/each}}
         </div>
-        {{/if}}
-        {{/each}}
     </div>
 </div>

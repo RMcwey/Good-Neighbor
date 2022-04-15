@@ -24,14 +24,12 @@
 
 <body>
   <header>
-
     <nav class="d-flex navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand pl-3" href="/">The Shelf</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- nav for my website-->
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
@@ -48,14 +46,11 @@
         </div>
       </div>
       </ul>
-      <!-- Conditionally render login or logout links -->
     </nav>
   </header>
 
   <main>
     {{{ body }}}
-
-  
    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   <script>anime.timeline({
   loop: false})
@@ -68,16 +63,13 @@
   });
   </script>
   </main>
-  
   <footer>
     <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf</div>
   </footer>
-
-  <!-- Render script for logged in users only -->
+  
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
- 
 </body>
 
 </html>
