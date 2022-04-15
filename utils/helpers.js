@@ -41,6 +41,20 @@ module.exports = {
     }
   },
 
+  format_mobile_number: (mobile) => {
+    const phoneNumberString = mobile;
+    var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+    var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+    if (match) {
+      return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    }
+    return null;
+  },
+
+  build_genre_dropdown: (genre) => {
+    
+  },
+
   ifCond: (v1, operator, v2, options) => {
     switch (operator) {
       case '==':

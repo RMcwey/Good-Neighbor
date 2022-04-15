@@ -66,6 +66,7 @@ header {
   height: 100%;
   position: relative;
   background-size: cover;
+  /* opacity: 75% */
 }
 
 .card {
@@ -141,4 +142,8 @@ header {
 
 .container-xxl {
   background-color: white;
+}
+
+#landing-page-full-body {
+
 }
