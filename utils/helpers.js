@@ -51,6 +51,10 @@ module.exports = {
     return null;
   },
 
+  build_genre_dropdown: (genre) => {
+    
+  },
+
   ifCond: (v1, operator, v2, options) => {
     switch (operator) {
       case '==':
