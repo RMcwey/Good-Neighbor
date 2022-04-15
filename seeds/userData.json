@@ -1,50 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345",
-    "unit_number": 1035,
+    "name": "Emma",
+    "email": "emma@mail.com",
+    "password": "password",
+    "unit_number": 1234,
     "mobile_number": 7701234567
   },
   {
     "id": 2,
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345",
-    "unit_number": 2060,
-    "mobile_number": 7702345678
+    "name": "Jeanie",
+    "email": "jeanie@mail.com",
+    "password": "password",
+    "unit_number": 2345,
+    "mobile_number": 4041234567
   },
   {
     "id": 3,
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345",
-    "unit_number": 3070,
-    "mobile_number": 7703456789
+    "name": "Ross",
+    "email": "ross@mail.com",
+    "password": "password",
+    "unit_number": 3456,
+    "mobile_number": 6781234567
   },
   {
     "id": 4,
-    "name": "Ross",
-    "email": "rmcwey@gmail.com",
-    "password": "password12345",
-    "unit_number": 1234,
-    "mobile_number": 7704567890
+    "name": "Patrick",
+    "email": "patrick@mail.com",
+    "password": "password",
+    "unit_number": 4567,
+    "mobile_number": 4781234567
   },
   {
     "id": 5,
-    "name": "Patrick",
-    "email": "patrick.f.ham@gmail.com",
-    "password": "password12345",
-    "unit_number": 1676,
-    "mobile_number": 7705962140
+    "name": "Jeff",
+    "email": "jeff@mail.com",
+    "password": "password",
+    "unit_number": 5678,
+    "mobile_number": 7702345678
   },
   {
     "id": 6,
-    "name": "Malika",
-    "email": "coolbeans@gmail.com",
-    "password": "password12345",
-    "unit_number": 6777,
-    "mobile_number": 7705678901
+    "name": "Zach",
+    "email": "zach@mail.com",
+    "password": "password",
+    "unit_number": 6789,
+    "mobile_number": 4042345678
+  },
+  {
+    "id": 7,
+    "name": "Kirk",
+    "email": "kirk@mail.com",
+    "password": "password",
+    "unit_number": 7890,
+    "mobile_number": 4042345678
   }
 ]
