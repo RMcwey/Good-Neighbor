@@ -1,4 +1,10 @@
+{{#unless logged_in}}
+<div class="alert alert-danger text-center" role="alert">
+  You can see what's on The Shelf, but you'll have to <a href="#" class="alert-link">SIGN-UP or SIGN-IN</a> to borrow.
+</div>
+{{/unless}}
 
+<div class="page-fade"
 <div id="bottomimage" class="col-12 m-0 p-0">
     <div class="container mt-0 mb-0">
         <div class="row">
@@ -29,4 +35,5 @@
             {{/each}}
         </div>
     </div>
+</div>
 </div>

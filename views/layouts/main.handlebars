@@ -52,6 +52,7 @@
   <main>
     {{{ body }}}
    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  
   <script>anime.timeline({
   loop: false})
   .add({
@@ -67,6 +68,17 @@
   loop: false})
   .add({
     targets: '.welcome-profile',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  });
+  </script>
+
+  <script>anime.timeline({
+  loop: false})
+  .add({
+    targets: '.page-fade',
     opacity: [0,1],
     easing: "easeInOutQuad",
     duration: 2250,
