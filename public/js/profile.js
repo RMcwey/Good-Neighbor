@@ -95,11 +95,3 @@ document
     .querySelector('#return-button')
     .addEventListener('click', returnButtonHandler);
   }
-  
-  /* document
-    .querySelector('#remove-button')
-    .addEventListener('click', delButtonHandler);
-  
-  document
-  .querySelector('#return-button')
-  .addEventListener('click', returnButtonHandler); */
