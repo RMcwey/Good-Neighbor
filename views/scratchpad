@@ -1,0 +1,44 @@
+<form class="form new-movie-form">
+        <div class="form-group">
+          <label for="movie-name">Movie Name:</label>
+          <input class="form-input" type="text" id="movie-name" name="movie-name" />
+        </div>
+        <div class="form-group">
+          <label for="movie-year">Movie Release Year:</label>
+          <input class="form-input" type="number" id="movie-year" name="movie-year" />
+        </div>
+        <div class="form-group">
+          <label for="movie-genre">Movie Genre:</label>
+          <select class="custom-select custom-select-lg mb-3" id="movie-genre">
+            <option selected>Select a Genre</option>
+            <option value="1">🎭 Drama</option>
+            <option value="2">😂 Comedy</option>
+            <option value="3">💣 Action</option>
+            <option value="4">🦄 Fantasy</option>
+            <option value="5">👻 Horror</option>
+            <option value="6">😍 Romance</option>
+            <option value="7">🏜️ Western</option>
+            <option value="8">😱 Thriller</option>
+            <option value="9">🤔 Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="movie-mpaa">Movie MPAA Rating:</label>
+          <select class="custom-select custom-select-lg mb-3" id="movie-mpaa">
+            <option selected>Select an MPAA Rating</option>
+            <option value="1">🟪 G // General Audiences</option>
+            <option value="2">🟦 PG // Parental Guidance</option>
+            <option value="3">🟩 PG-13 // PG, ages 13+</option>
+            <option value="4">🟨 R // Restricted Audiences</option>
+            <option value="5">🟧 NC-17 // No Children, ages 17+</option>
+            <option value="6">🟥 X // Sexual Content, Pornographic</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="movie-desc">Description:</label>
+          <textarea class="form-input" id="movie-desc" name="movie-desc"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">PUT it on the Shelf!</button>
+        </div>
+      </form>

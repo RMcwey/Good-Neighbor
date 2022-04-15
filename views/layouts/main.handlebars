@@ -62,6 +62,18 @@
     delay: (el, i) => 150 * (i+1)
   });
   </script>
+
+  <script>anime.timeline({
+  loop: false})
+  .add({
+    targets: '.welcome-profile',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  });
+  </script>
+
   </main>
   <footer>
     <div class="footer-copyright text-center py-3">© 2022 Copyright The Shelf</div>
