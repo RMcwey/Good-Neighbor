@@ -16,9 +16,9 @@
 ## Description 
 
 - **What was your motivation?** To bring neighbors together by allowing them to track movies that their neighbors and they want to share and swap amongst themselves.
-- **Why did you build this project?** To allow people to make connections with those who love around them by sharing their common interests
+- **Why did you build this project?** To allow people to make connections with those around them by sharing their common interests
 - **What problem does it solve?** This app allows people to track where their stuff goes and allows them to share what they love.
-- **What did you learn?** A lot about handlebars, back-end, anime.js and how to work on a team
+- **What did you learn?** A lot about handlebars, back-end, anime.js and how to work on a team.
 
 ## Installation
 
@@ -39,9 +39,12 @@ Jeanie Uy, Emmanuela Jean-Baptiste, Patrick Ham, Ross McWey
 
 
 ## Questions
-My Github page: https://github.com/RMcwey
+Ross' Github: https://github.com/RMcwey
+Emma's Github: https://github.com/emma4jesus
+Patrick's Github: https://github.com/PatrickFHam
+Jeanie's Github: https://github.com/jeanieuy
 <br>
-For any questions please contact me at rmcwey@hotmail.com
+For any questions please contact Ross at rmcwey@hotmail.com
 
 ## License 
 <br>
