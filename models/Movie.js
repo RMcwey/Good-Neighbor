@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Movie extends Model {}
+class Movie extends Model { }
 
 Movie.init(
   {
@@ -43,7 +43,7 @@ Movie.init(
       }
     },
     movie_description: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1000),
       allowNull: true,
       defaultValue: "(No description given by the user.)",
     },
