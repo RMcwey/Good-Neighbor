@@ -85,13 +85,15 @@ document
   .querySelector('.new-movie-form')
   .addEventListener('submit', newFormHandler);
 
-  
-  if (document.querySelector('#remove-button')) {
-    document
-    .querySelector('#remove-button')
-    .addEventListener('click', delButtonHandler);
-  } else if (document.querySelector('#return-button')) {
-    document
-    .querySelector('#return-button')
-    .addEventListener('click', returnButtonHandler);
-  }
+
+if (document.querySelector('#remove-button')) {
+  document
+  .querySelector('#remove-button')
+  .addEventListener('click', delButtonHandler);
+};
+
+if (document.querySelector('#return-button')) {
+  document
+  .querySelector('#return-button')
+  .addEventListener('click', returnButtonHandler);
+};
