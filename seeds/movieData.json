@@ -5,7 +5,7 @@
     "movie_genre": 1,
     "mpaa_rating": 4,
     "movie_description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. --(from IMDB)",
-    "movie_contributor": 1,
+    "movie_contributor": 3,
     "current_holder": "Amiko"
   },
   {
@@ -14,7 +14,7 @@
     "movie_genre": 1,
     "mpaa_rating": 4,
     "movie_description": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son. --(from IMDB)",
-    "movie_contributor": 2
+    "movie_contributor": 3
   },
   {
     "movie_name": "The Dark Knight",
@@ -30,7 +30,7 @@
     "movie_genre": 3,
     "mpaa_rating": 3,
     "movie_description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence. --(from IMDB)",
-    "movie_contributor": 3
+    "movie_contributor": 4
   },
   {
     "movie_name": "Toy Story",
@@ -38,7 +38,71 @@
     "movie_genre": 2,
     "mpaa_rating": 2,
     "movie_description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room. --(from IMDB)",
+    "movie_contributor": 4,
+    "current_holder": null
+  },
+  {
+    "movie_name": "Encanto",
+    "publish_year": 2021,
+    "movie_genre": 2,
+    "mpaa_rating": 2,
+    "movie_description": "The Madrigals are an extraordinary family who live hidden in the mountains of Colombia in a charmed place called the Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -- every child except Mirabel. However, she soon may be the Madrigals last hope when she discovers that the magic surrounding the Encanto is now in danger. --(from IMDB)",
+    "movie_contributor": 1,
+    "current_holder": null
+  },
+  {
+    "movie_name": "Spider Man",
+    "publish_year": 2002,
+    "movie_genre": 3,
+    "mpaa_rating": 3,
+    "movie_description": "'Spider-Man' centers on student Peter Parker (Tobey Maguire) who, after being bitten by a genetically-altered spider, gains superhuman strength and the spider-like ability to cling to any surface. He vows to use his abilities to fight crime, coming to understand the words of his beloved Uncle Ben: 'With great power comes great responsibility.' --(from IMDB)",
+    "movie_contributor": 1,
+    "current_holder": null
+  },
+  {
+    "movie_name": "The Batman",
+    "publish_year": 2022,
+    "movie_genre": 3,
+    "mpaa_rating": 3,
+    "movie_description": " --(from IMDB)",
+    "movie_contributor": 4,
+    "current_holder": null
+  },
+  {
+    "movie_name": "Paranormal Activity",
+    "publish_year": 2007,
+    "movie_genre": 5,
+    "mpaa_rating": 4,
+    "movie_description": "After moving into a suburban home, a couple becomes increasingly disturbed by a nightly demonic presence. --(from IMDB)",
+    "movie_contributor": 4,
+    "current_holder": null
+  },
+  {
+    "movie_name": "The Magnificent Seven",
+    "publish_year": 1960,
+    "movie_genre": 7,
+    "mpaa_rating": 2,
+    "movie_description": "Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits. --(from IMDB)",
     "movie_contributor": 3,
-    "current_holder": "Sal"
+    "current_holder": null
+  },
+  {
+    "movie_name": "Lord of the Rings",
+    "publish_year": 2001,
+    "movie_genre": 4,
+    "mpaa_rating": 2,
+    "movie_description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron. --(from IMDB)",
+    "movie_contributor": 3,
+    "current_holder": null
+  },
+  {
+    "movie_name": "Gone with the Wind",
+    "publish_year": 1939,
+    "movie_genre": 6,
+    "mpaa_rating": 2,
+    "movie_description": "The manipulative daughter of a Georgia plantation owner conducts a turbulent romance with a roguish profiteer during the American Civil War and Reconstruction periods. --(from IMDB)",
+    "movie_contributor": 1,
+    "current_holder": null
   }
+
 ]
