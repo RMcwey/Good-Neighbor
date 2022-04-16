@@ -6,6 +6,7 @@
 ## Table of contents
 * [Description](#description)
 * [Installation](#installation)
+* [Technologies Used](#technologies-used)
 * [Usage](#usage)
 * [Credits](#credits)
 * [Live URL](#live-url)
@@ -21,6 +22,32 @@
 - **What did you learn?** A lot about handlebars, back-end, anime.js and how to work on a team.
 
 ## Installation
+Visit our site on Heroku or to install on your local machine, please following these instructions: 
+1. Clone repo
+2. Create a `.env` file with the following code: 
+* DB_NAME=goodneighbor_db
+* DB_PASSWORD=your_password
+* DB_USER=root
+3. Enter `npm i`
+4. Enter your MySQL and run `source db/schema.sql`
+5. Then exit MySQL
+6. Enter `npm run seed` to get seeded data
+7. Finally, enter `npm start`
+
+## Technologies Used 
+* HTML
+* CSS
+* Bootstrap
+* Anime.js
+* JavaScript
+* jQuery
+* Node.js
+* Express.js
+* Popper.js
+* Handlebars
+* MySQL
+* Sequelize
+* Heroku
 
 
 
@@ -29,20 +56,17 @@
 Provide instructions and examples for use. Include screenshots as needed.
 
 ## Live URL
-
+https://pure-cliffs-09110.herokuapp.com/
 
 ## Credits
 Jeanie Uy, Emmanuela Jean-Baptiste, Patrick Ham, Ross McWey
 
-## Tests
-
-
 
 ## Questions
-Ross' Github: https://github.com/RMcwey
-Emma's Github: https://github.com/emma4jesus
-Patrick's Github: https://github.com/PatrickFHam
-Jeanie's Github: https://github.com/jeanieuy
+* Ross' Github: https://github.com/RMcwey
+* Emma's Github: https://github.com/emma4jesus
+* Patrick's Github: https://github.com/PatrickFHam
+* Jeanie's Github: https://github.com/jeanieuy
 <br>
 For any questions please contact Ross at rmcwey@hotmail.com
 
