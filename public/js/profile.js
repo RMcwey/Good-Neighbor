@@ -85,15 +85,16 @@ document
   .querySelector('.new-movie-form')
   .addEventListener('submit', newFormHandler);
 
+  if (document.querySelector('.remove-button')) {
+    const allRemoveButtons = document.querySelectorAll('.remove-button');
+    allRemoveButtons.forEach(removeButton => {
+      removeButton.addEventListener('click', delButtonHandler)
+    })
+  };
 
-if (document.querySelector('#remove-button')) {
-  document
-  .querySelector('#remove-button')
-  .addEventListener('click', delButtonHandler);
-};
-
-if (document.querySelector('#return-button')) {
-  document
-  .querySelector('#return-button')
-  .addEventListener('click', returnButtonHandler);
-};
+  if (document.querySelector('.return-button')) {
+    const allReturnButtons = document.querySelectorAll('.return-button');
+    allReturnButtons.forEach(returnButton => {
+      returnButton.addEventListener('click', returnButtonHandler)
+    })
+  };
