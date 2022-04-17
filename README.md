@@ -68,7 +68,11 @@ Jeanie Uy, Emmanuela Jean-Baptiste, Patrick Ham, Ross McWey
 * Patrick's Github: https://github.com/PatrickFHam
 * Jeanie's Github: https://github.com/jeanieuy
 <br>
-For any questions please contact Ross at rmcwey@hotmail.com
+For any questions please contact:
+Ross at rmcwey@hotmail.com
+Jeanie at jbeth0622uy@gmail.com
+Patrick at patrick.f.ham@gmail.com
+Emma at emma4jesus@gmail.com
 
 ## License 
 <br>
@@ -89,5 +93,11 @@ Please refer to this link for the GNU General Public Licences http://www.gnu.org
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>
-            
-    
+
+## screenshots
+![Landing page](/public/images/Readme1.png?raw=true "Landing page")
+![LogIn page](/public/images/Readme2.png?raw=true "LogIn page")
+![The shelf](/public/images/Readme3.png?raw=true "The shelf")
+![Welcome page](/public/images/Readme4.png?raw=true "Welcome page")
+![About us page](/public/images/Readme5.png?raw=true "About us page")
+
