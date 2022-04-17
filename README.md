@@ -7,11 +7,11 @@
 * [Description](#description)
 * [Installation](#installation)
 * [Technologies Used](#technologies-used)
-* [Usage](#usage)
 * [Credits](#credits)
 * [Live URL](#live-url)
 * [Questions](#questions)
 * [License](#license)
+* [Screen Shots](#screen-shots)
     
 
 ## Description 
@@ -49,12 +49,6 @@ Visit our site on Heroku or to install on your local machine, please following t
 * Sequelize
 * Heroku
 
-
-
-## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
 ## Live URL
 https://pure-cliffs-09110.herokuapp.com/
 
@@ -69,10 +63,10 @@ Jeanie Uy, Emmanuela Jean-Baptiste, Patrick Ham, Ross McWey
 * Jeanie's Github: https://github.com/jeanieuy
 <br>
 For any questions please contact:
-Ross at rmcwey@hotmail.com
-Jeanie at jbeth0622uy@gmail.com
-Patrick at patrick.f.ham@gmail.com
-Emma at emma4jesus@gmail.com
+* Ross at rmcwey@hotmail.com
+* Jeanie at jbeth0622uy@gmail.com
+* Patrick at patrick.f.ham@gmail.com
+* Emma at emma4jesus@gmail.com
 
 ## License 
 <br>
@@ -94,7 +88,7 @@ Please refer to this link for the GNU General Public Licences http://www.gnu.org
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-## screenshots
+## Screen Shots
 ![Landing page](/public/images/Readme1.png?raw=true "Landing page")
 ![LogIn page](/public/images/Readme2.png?raw=true "LogIn page")
 ![The shelf](/public/images/Readme3.png?raw=true "The shelf")
