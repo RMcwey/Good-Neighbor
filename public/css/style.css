@@ -94,7 +94,7 @@ header {
   /* border-radius: 25px; */
 }
 
-.abouthead {
+#abouthead {
   background-image: url(../images/aboutus.jpg);
   background-position: center;
   background-repeat: no-repeat;
